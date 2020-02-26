@@ -1,0 +1,14 @@
+.flats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.flat-card {
+  display:flex;
+  flex-direction: column;
+  flex-wrap:wrap;
+  border: 1px solid red;
+  padding: 15px;
+  flex: end;
+}
+

@@ -1,0 +1,26 @@
+<div class="container">
+  
+  <h1 class="text-center">Check out these shwifty flats</h1>
+  <div class="flats-grid">
+    <% @flats.each do |flat| %>
+      <div class="flat-card">
+        <h4>
+          <%= link_to flat_path(flat.id) do %>
+            <%= flat.name[0..20] %>...
+          <% end %>
+        </h4>
+        <p><%= flat.description[0..100] %>...</p>
+        <div>
+          <span class="mr-3">
+            <i class="fas fa-users"></i> 
+            <%= flat.number_of_guests %>  
+          </span>
+          <span>
+            <i class="fas fa-dollar-sign"></i> 
+            <%= flat.price_per_night  %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
